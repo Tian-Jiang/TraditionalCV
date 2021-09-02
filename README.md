@@ -1,13 +1,13 @@
 # TraditionalCV
 #### 传统车道线检测
 1. 提取特征
-1.1 Sobel算子
+- 1.1 Sobel算子
 - 图像边缘检测
-![image](https://user-images.githubusercontent.com/6326768/131777283-94a86938-6328-4130-bed9-1e9797854da6.png)
+- ![image](https://user-images.githubusercontent.com/6326768/131777283-94a86938-6328-4130-bed9-1e9797854da6.png)
 - 原始像素灰度值，通过卷积，变成右边像素值减去左边像素值，反映了水平方向的变化
-![image](https://user-images.githubusercontent.com/6326768/131777303-5013187e-a051-465d-a232-ba09e4650d23.png)
+- ![image](https://user-images.githubusercontent.com/6326768/131777303-5013187e-a051-465d-a232-ba09e4650d23.png)
 - 原始像素灰度值，通过卷积，变成下边像素值减去上边像素值，反映了垂直方向的变化
-1.2 HLS图像中的S通道
+- 1.2 HLS图像中的S通道
 - HLS分别是图象亮度,饱和度,色度。车道线有黄色和白色，通过S通道可以提取出黄色的车道线。
 2. 过滤特征
 - 将上一步中提取出的特征过滤。将大于阈值的置为255，小于的置为0.
